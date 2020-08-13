@@ -1,0 +1,30 @@
+<div class="container mb-5  pb-5">
+  <h2 class="text-center text-uppercase">{{title}}</h2>
+  <div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+    <div class="divider-custom-line"></div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-lg-8 mx-auto">
+      <form [formGroup]="contactForm">
+        <div class="md-form">
+          <input type="text" id="contactFormName" class="form-control" formControlName="contactFormName" mdbInput>
+          <label for="contactFormName">Name</label>
+        </div>
+        <div class="md-form">
+          <input type="email" id="contactFormEmail" class="form-control" formControlName="contactFormEmail" mdbInput>
+          <label for="contactFormEmail">Email Address</label>
+        </div>
+        <div class="md-form">
+          <textarea type="text" id="contactFormMessage" class="md-textarea form-control md-textarea-auto" mdbInput formControlName="contactFormMessage"></textarea>
+          <label for="contactFormMessage">Message</label>
+        </div>
+
+        <button type="submit" mdbBtn color="unique" mdbWavesEffect [disabled]="disabledSubmitButton">SUBMIT</button>
+
+      </form>
+    </div>
+  </div>
+
+</div>

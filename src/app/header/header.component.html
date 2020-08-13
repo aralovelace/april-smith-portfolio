@@ -1,0 +1,48 @@
+<mdb-navbar SideClass="navbar fixed-top
+navbar-expand-lg navbar-dark purple darken-4
+ ie-nav scrolling-navbar intro-fixed-nav
+ p-3" [containerInside]="true">
+  <mdb-navbar-brand>
+    <a class="logo navbar-brand" pageScroll duration="2000" verticalScrolling="true" href="#"><strong>{{title}}</strong></a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a pageScroll  duration="2000" class="nav-link" href="#skills">SKILLS</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a pageScroll duration="2000" class="nav-link" href="#about">ABOUT</a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a pageScroll duration="2000" class="nav-link" href="#contact">CONTACT</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav nav-flex-icons">
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" target="_blank" href="https://github.com/aralovelace"><mdb-icon fab icon="github"></mdb-icon></a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aprilksmith/"><mdb-icon fab icon="linkedin"></mdb-icon></a>
+      </li>
+      <li class="nav-item waves-light" mdbWavesEffect>
+        <a class="nav-link" target="_blank" href="http://aralovelace.dev/"><mdb-icon fab icon="wordpress"></mdb-icon></a>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>
+
+<header class="pink darken-4 white-text">
+  <div class="container d-flex align-items-center flex-column">
+
+    <img class="mb-4" src="assets/images/3.svg" alt="aralovelace" />
+
+    <h1 class="text-uppercase">{{title}}</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <h3>{{role}}</h3>
+  </div>
+</header>
