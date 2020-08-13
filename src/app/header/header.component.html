@@ -3,18 +3,18 @@ navbar-expand-lg navbar-dark purple darken-4
  ie-nav scrolling-navbar intro-fixed-nav
  p-3" [containerInside]="true">
   <mdb-navbar-brand>
-    <a class="logo navbar-brand" pageScroll duration="2000" verticalScrolling="true" href="#"><strong>{{title}}</strong></a>
+    <a class="logo navbar-brand" pageScroll  verticalScrolling="true" (click)="scroll('page-top')" href="#"><strong>{{title}}</strong></a>
   </mdb-navbar-brand>
   <links>
     <ul class="navbar-nav mr-auto ">
       <li class="nav-item waves-light" mdbWavesEffect>
-        <a pageScroll  duration="2000" class="nav-link" href="#skills">SKILLS</a>
+        <a pageScroll  class="nav-link" (click)="scroll('skills')" href="#skills">SKILLS</a>
       </li>
       <li class="nav-item waves-light" mdbWavesEffect>
-        <a pageScroll duration="2000" class="nav-link" href="#about">ABOUT</a>
+        <a pageScroll  class="nav-link" (click)="scroll('about')" href="#about">ABOUT</a>
       </li>
       <li class="nav-item waves-light" mdbWavesEffect>
-        <a pageScroll duration="2000" class="nav-link" href="#contact">CONTACT</a>
+        <a pageScroll class="nav-link" (click)="scroll('contact')" href="#contact">CONTACT</a>
       </li>
     </ul>
     <ul class="navbar-nav nav-flex-icons">

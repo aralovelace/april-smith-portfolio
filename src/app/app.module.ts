@@ -26,7 +26,7 @@ import {FooterComponent} from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    NgxPageScrollCoreModule.forRoot({duration: 2500}),
+    NgxPageScrollCoreModule.forRoot({duration: 1000, scrollOffset: 50, scrollInView: true}),
     ReactiveFormsModule
   ],
   providers: [],

@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import {PageScrollService} from 'ngx-page-scroll-core';
 import {DOCUMENT} from '@angular/common';
 
@@ -7,18 +7,17 @@ import {DOCUMENT} from '@angular/common';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
 
   title = 'April Smith';
   role = 'Full Stack Developer';
 
-  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) {
-  }
+  constructor(private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) { }
 
-  ngOnInit(): void {
+   scroll(href): void {
     this.pageScrollService.scroll({
       document: this.document,
-      scrollTarget: '.theEnd',
+      scrollTarget: '#' + href,
     });
   }
 
