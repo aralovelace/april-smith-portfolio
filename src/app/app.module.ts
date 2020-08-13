@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FooterComponent} from './footer/footer.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,9 @@ import {FooterComponent} from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    NgxPageScrollCoreModule.forRoot({duration: 1000, scrollOffset: 50, scrollInView: true}),
-    ReactiveFormsModule
+    NgxPageScrollCoreModule.forRoot({duration: 800, scrollOffset: 50, scrollInView: true}),
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

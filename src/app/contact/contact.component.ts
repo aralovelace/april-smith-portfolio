@@ -1,12 +1,14 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import {Component, HostListener, } from '@angular/core';
+import {Validators, FormBuilder, FormGroup} from '@angular/forms';
+import {ContactService} from './contact.service';
+
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
   title = 'Contact';
   contactForm: FormGroup;
@@ -19,8 +21,7 @@ export class ContactComponent implements OnInit {
     }
   }
 
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private contactService: ContactService ) {
     this.contactForm = fb.group({
       contactFormName: ['', Validators.required],
       contactFormEmail: ['', [Validators.required, Validators.email]],
@@ -28,7 +29,18 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  onSubmit(): void {
+    this.contactService.submitMessage(this.contactForm.value)
+      .subscribe(responseData => {
+        alert('Your message has been sent.');
+      }, error => {
+        console.log('Error', error);
+      });
+    this.contactForm.reset();
+    this.disabledSubmitButton = true;
+
   }
+
+
 
 }
