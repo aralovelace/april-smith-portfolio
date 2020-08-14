@@ -8,6 +8,13 @@
   <div class="row mt-5">
     <div class="col-lg-8 mx-auto">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="alert alert-success" role="alert" *ngIf="submitInfo">
+         {{submitInfo}}
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="errorMsg">
+         {{errorMsg}}
+        </div>
+
         <div class="md-form">
           <input type="text" id="contactFormName" class="form-control" formControlName="contactFormName" mdbInput>
           <label for="contactFormName">Name</label>

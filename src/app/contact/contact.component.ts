@@ -13,6 +13,8 @@ export class ContactComponent {
   title = 'Contact';
   contactForm: FormGroup;
   disabledSubmitButton = true;
+  submitInfo = '';
+  errorMsg= ''
 
   @HostListener('input') oninput() {
 
@@ -32,9 +34,9 @@ export class ContactComponent {
   onSubmit(): void {
     this.contactService.submitMessage(this.contactForm.value)
       .subscribe(responseData => {
-        alert('Your message has been sent.');
+        this.submitInfo = 'Your message has been sent.';
       }, error => {
-        console.log('Error', error);
+       this.errorMsg = error;
       });
     this.contactForm.reset();
     this.disabledSubmitButton = true;

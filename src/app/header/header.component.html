@@ -3,7 +3,9 @@ navbar-expand-lg navbar-dark purple darken-4
  ie-nav scrolling-navbar intro-fixed-nav
  p-3" [containerInside]="true">
   <mdb-navbar-brand>
-    <a class="logo navbar-brand" pageScroll  verticalScrolling="true" (click)="scroll('page-top')" href="#"><strong>{{title}}</strong></a>
+    <a class="logo navbar-brand" pageScroll  verticalScrolling="true" (click)="scroll('page-top')" href="#">
+      <img src="assets/images/logo.png" style="height: 40px;" class="h-responsive">
+    </a>
   </mdb-navbar-brand>
   <links>
     <ul class="navbar-nav mr-auto ">
@@ -34,7 +36,7 @@ navbar-expand-lg navbar-dark purple darken-4
 <header class="pink darken-4 white-text">
   <div class="container d-flex align-items-center flex-column">
 
-    <img class="mb-4" src="assets/images/3.svg" alt="aralovelace" />
+    <img class="mb-4" src="assets/images/aralovelace.png" alt="aralovelace" />
 
     <h1 class="text-uppercase">{{title}}</h1>
     <!-- Icon Divider-->
